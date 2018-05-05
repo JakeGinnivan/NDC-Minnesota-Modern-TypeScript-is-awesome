@@ -1,0 +1,12 @@
+const aFlight: any = { /*...*/}
+
+if (isFlight(aFlight)) {
+    aFlight.whatever // compilation error, whatever does not exist on Flight
+    aFlight.from // get type safety inside the if block!
+}
+
+aFlight.whatever // no compilation error
+
+function isFlight(obj: any): obj is Flight {
+    return 'from' in obj && 'to' in obj && 'duration' in obj
+}

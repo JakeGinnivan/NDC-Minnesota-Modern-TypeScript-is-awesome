@@ -1,0 +1,22 @@
+interface Flight {
+    kind: 'flight'
+    from: string
+    to: string
+    duration: [number, number]
+}
+
+interface Layover {
+    kind: 'layover'
+    duration: [number, number]
+    location: string
+}
+
+const leg: Flight | Layover /* = {...} */
+
+if (leg.kind === 'flight') {
+    aFlight.whatever // compilation error, whatever does not exist on Flight
+    aFlight.from // get type safety inside the if block!
+    return
+}
+
+aFlight.location // works fine

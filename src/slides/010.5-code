@@ -1,0 +1,28 @@
+// types.ts
+export interface Flight {
+    from: string
+    to: string
+    duration: [number, number]
+}
+
+// hours-on-flight.ts
+import { Flight } from './types'
+
+export default function hoursOnFlights(flights: Flight[]): [number, number] {
+    const sum = flights.reduce(
+        (acc, flight) => {
+            typeof acc
+            return [acc[0] + flight.duration[0], acc[1] + flight.duration[1]]
+        },
+        [0, 0]
+    )
+
+    return [sum[0] + Math.floor(sum[0] / 60), sum[1] % 60]
+}
+
+// home.ts
+import hoursOnFlights from './hours-on-flight'
+
+const flights: Flight[] = [/*...*/]
+
+const totalHours = hoursOnFlights(flights)

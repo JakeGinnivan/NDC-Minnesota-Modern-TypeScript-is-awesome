@@ -1,0 +1,7 @@
+function doSomething(options?: Options) {
+    if (!options) {
+        return
+    }
+
+    // Options is now defined!
+}
