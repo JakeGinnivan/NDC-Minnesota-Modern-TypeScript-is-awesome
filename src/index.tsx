@@ -6,7 +6,7 @@ import { AppContainer } from 'react-hot-loader'
 
 import 'prismjs/themes/prism.css'
 import 'prismjs/themes/prism-tomorrow.css'
-
+import './prismjs-overrides.css'
 // tslint:disable-next-line:no-any
 const CustomErrorReporter: React.SFC<{ error: any }> = ({ error }) => <Redbox error={error} />
 

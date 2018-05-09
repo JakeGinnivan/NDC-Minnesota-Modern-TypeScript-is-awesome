@@ -1,7 +1,6 @@
-function doSomething(options?: Options) {
-    if (!options) {
-        return
-    }
+function logger(options?: { pretty?: boolean }) {
+    !options && (options = {})
+    options.pretty === undefined && (options.pretty = false)
 
-    // Options is now defined!
+    const isPretty: boolean = options.pretty
 }

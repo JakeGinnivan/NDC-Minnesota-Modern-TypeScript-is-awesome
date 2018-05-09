@@ -2,8 +2,7 @@ import * as React from 'react'
 import { Deck } from 'spectacle'
 
 import createTheme from 'spectacle/lib/themes/default'
-// tslint:disable-next-line
-console.log((window as any).Prism.languages)
+
 import './images'
 
 require('normalize.css')

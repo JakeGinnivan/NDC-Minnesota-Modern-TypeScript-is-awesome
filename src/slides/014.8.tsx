@@ -7,10 +7,10 @@ export default (
         <Heading size={2} textColor="tertiary" caps>
             So why is that awesome?
         </Heading>
-        <Heading size={5}>Type narrowing/safety when type not known!</Heading>
+        <Heading size={5}>Compile time safety for types with same keys but different values!</Heading>
 
         <Appear>
-            <Image width="50%" src={awesomeImages.legoAwesome} />
+            <Image width="50%" src={awesomeImages.thatIsAwesome} />
         </Appear>
     </Slide>
 )

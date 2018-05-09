@@ -1,0 +1,31 @@
+interface ArticleSummary {
+    heading: string
+    byline?: {
+        name: string
+        photo: string
+    }
+}
+
+type Describe<T extends object> = {
+    [key in keyof T]-?: T[key] === 'object' ? Describe<T[key]> : string
+}
+
+type ArticleSummaryDescription = Describe<ArticleSummary>
+
+const articleDescription: ArticleDescription = {
+    heading: 'The article heading',
+    byline: {
+        name: 'The journalists name',
+        photo: 'The photo of the journalist'
+    }
+}
+
+
+
+
+
+
+
+
+
+

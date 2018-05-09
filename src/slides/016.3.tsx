@@ -7,10 +7,10 @@ export default (
         <Heading size={2} textColor="tertiary" caps>
             So why is that awesome?
         </Heading>
-        <Heading size={5}>It just works</Heading>
+        <Heading size={5}>The possibilities!</Heading>
 
         <Appear>
-            <Image width="50%" src={awesomeImages.bath} />
+            <Image width="50%" src={awesomeImages.thatIsAwesome} />
         </Appear>
     </Slide>
 )

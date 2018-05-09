@@ -9,10 +9,12 @@ export default (
         code={code}
         ranges={[
             { loc: [0, 0], title: 'Tagged union' },
-            { loc: [0, 6], note: 'Add `kind`=flight' },
-            { loc: [7, 12], note: 'Add `kind`=layover' },
-            { loc: [13, 14], note: 'Variable which is a union of those two interfaces' },
-            { loc: [15, 20], note: 'Can now just check the `kind` property to know the type' }
+            { loc: [0, 14], note: 'Add the tagging field (type)' },
+            { loc: [1, 2], note: 'It should be a unique `string literal`' },
+            { loc: [15, 16], note: 'Create a union type of the `tagged` types' },
+            { loc: [16, 17], note: `'text' | 'standfirst' | 'blockquote'` },
+            { loc: [19, 34], note: 'Can now use the tag field as a Type Guard' },
+            { loc: [35, 42], note: 'Exhaustive check' }
         ]}
     />
 )

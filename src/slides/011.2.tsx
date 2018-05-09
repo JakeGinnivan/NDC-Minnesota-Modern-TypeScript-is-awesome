@@ -4,6 +4,9 @@ import { css } from 'emotion'
 
 export default (
     <Slide transition={['fade']} bgColor="primary">
+        <Heading size={2} textColor="tertiary" caps>
+            Feature: Strict null checks
+        </Heading>
         <div className={css({ '& p': { lineHeight: '4rem' } })}>
             <Layout>
                 <Appear>

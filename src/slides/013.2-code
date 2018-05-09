@@ -1,22 +1,48 @@
-interface Flight {
-    kind: 'flight'
-    from: string
-    to: string
-    duration: [number, number]
+interface TextBlock {
+    type: 'text'
+    text: string
+    formatting: TextFormatting
+}
+interface StandfirstBlock {
+    type: 'standfirst'
+    text: string
+}
+interface BlockQuote {
+    type: 'blockquote'
+    quote: string
+    cite: string
 }
 
-interface Layover {
-    kind: 'layover'
-    duration: [number, number]
-    location: string
+type Blocks = TextBlock | StandfirstBlock | BlockQuote
+type BlockTypes = Blocks['type']
+
+const renderBlock = ({ block }: { block: Blocks }) => {
+    switch (block.type) {
+        case 'text':
+            return <TextComponent text={block.text} formatting={block.formatting} />
+
+        case 'standfirst':
+            return <p className="standfirst">{block.text}</p>
+
+        case 'blockquote':
+            return (
+                <blockquote>
+                    {block.quote}
+                    <footer>{block.cite}</footer>
+                </blockquote>
+            )
+
+        default:
+            assertNever(block)
+    }
 }
 
-const leg: Flight | Layover /* = {...} */
-
-if (leg.kind === 'flight') {
-    aFlight.whatever // compilation error, whatever does not exist on Flight
-    aFlight.from // get type safety inside the if block!
-    return
+function assertNever(block: Blocks): never {
+    throw new Error(`${block.type} is not handled`)
 }
 
-aFlight.location // works fine
+interface TextFormatting {
+    type: 'italic' | 'bold'
+    to: number
+    from: number
+}

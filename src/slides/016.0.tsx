@@ -4,7 +4,7 @@ import { Slide, Heading } from 'spectacle'
 export default (
     <Slide transition={['fade']} bgColor="primary">
         <Heading size={3} caps textColor="tertiary">
-            Feature: Indexed / Mapped Types
+            Feature: Conditional types
         </Heading>
     </Slide>
 )

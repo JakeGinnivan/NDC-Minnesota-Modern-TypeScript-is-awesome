@@ -1,29 +1,19 @@
 import * as React from 'react'
-import { Slide, Appear, Text } from 'spectacle'
-import { images } from '../images'
+import CodeSlide from 'spectacle-code-slide'
+
+const code = require('!!raw-loader!./010.4-code')
 
 export default (
-    <Slide transition={['fade']} bgColor="primary">
-        <Appear>
-            <img width="200px" src={images.browserify} />
-        </Appear>
-        <Appear>
-            <img width="30%" src={images.webpack} />
-        </Appear>
-        <Appear>
-            <img width="30%" src={images.npm} />
-        </Appear>
-
-        <Appear>
-            <Text textColor="secondary" margin="60px 0 0 0">
-                TypeScript definition files acquired from NPM now!
-            </Text>
-        </Appear>
-
-        <Appear>
-            <Text textColor="secondary" margin="60px 0 0 0">
-                Much better suppport for node module resolution
-            </Text>
-        </Appear>
-    </Slide>
+    <CodeSlide
+        lang="ts"
+        code={code}
+        ranges={[
+            { loc: [0, 1], note: 'Function with optional options object' },
+            { loc: [1, 2], note: 'Set options to empty object if not defined' },
+            { loc: [2, 3], note: '' },
+            { loc: [7, 8], note: 'What is the type of msg?' },
+            { loc: [7, 8], note: '< 2.0: string | GetLogMessage' },
+            { loc: [7, 8], note: '> 2.0: string due to type narrowing!' }
+        ]}
+    />
 )

@@ -1,33 +1,9 @@
-interface Address {
-    houseNumber: number
-    street: string
-    city?: string
-    state: string
-    country: string
+interface Feature {
+    canUserToggle: boolean
+    enabled: boolean
 }
 
-interface Accommodation {
-    address: Address
-}
+type Features = 'autoplayVideo' | 'newArticlePage'
 
-export type Describe<Type extends { [key: string]: any }> = {
-    [Key in keyof Type]: typeof Type[Key] === 'object' ? Describe<Type[Key]> : string
-}
-
-const addressTypeDescription: Describe<Address> = {
-    houseNumber: 'The house number',
-    street: 'The street',
-    state: 'The state',
-    country: 'The country'
-}
-
-export type Describe<Type extends { [key: string]: any }> = {
-    [Key in keyof Type]-?: string
-}
-
-const accommodationDescription: Describe<Accommodation> = {
-    address: {
-        houseNumber: 
-    }
-}
-
+type FeatureState = { [feature in Features]: Feature }
+type FeatureDescription = { [feature in Features]: string }

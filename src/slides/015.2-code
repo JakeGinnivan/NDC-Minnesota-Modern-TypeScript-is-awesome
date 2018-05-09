@@ -1,0 +1,27 @@
+interface Article {
+    heading: string
+    byline?: string
+    contents: Blocks[]
+}
+
+type Describe<T extends object> = { [key in keyof T]: string }
+
+type ArticleDescription = Describe<Article>
+
+const articleDescription: ArticleDescription = {
+    heading: 'The article heading',
+    contents: 'The body copy of the article'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+type Describe<T extends object> = { [key in keyof T]-?: string }

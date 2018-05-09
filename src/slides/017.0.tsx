@@ -4,26 +4,36 @@ import { Slide, Heading, Text, Appear } from 'spectacle'
 export default (
     <Slide transition={['fade']} bgColor="tertiary">
         <Heading size={1} textColor="primary" caps>
-            Agenda
+            Feature Recap!
         </Heading>
         <Appear>
             <Text textColor="secondary" lineHeight={1.5}>
-                What is TypeScript?
+                Control flow analysis
             </Text>
         </Appear>
         <Appear>
             <Text textColor="secondary" lineHeight={1.5}>
-                Why TypeScript?
+                Strict null checks
             </Text>
         </Appear>
         <Appear>
             <Text textColor="secondary" lineHeight={1.5}>
-                TypeScript Introduction
+                Tagged unions
             </Text>
         </Appear>
         <Appear>
             <Text textColor="secondary" lineHeight={1.5}>
-                Awesome features in TypeScript 2.x
+                Indexed / Mapped Types
+            </Text>
+        </Appear>
+        <Appear>
+            <Text textColor="secondary" lineHeight={1.5}>
+                Type modifiers
+            </Text>
+        </Appear>
+        <Appear>
+            <Text textColor="secondary" lineHeight={1.5}>
+                Conditional types
             </Text>
         </Appear>
     </Slide>

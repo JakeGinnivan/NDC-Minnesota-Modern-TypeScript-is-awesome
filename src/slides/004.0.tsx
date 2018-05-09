@@ -4,7 +4,7 @@ import { Slide, Heading } from 'spectacle'
 export default (
     <Slide transition={['fade']} bgColor="primary">
         <Heading size={2} textColor="tertiary" caps>
-            Why TypeScript?
+            What is TypeScript?
         </Heading>
     </Slide>
 )

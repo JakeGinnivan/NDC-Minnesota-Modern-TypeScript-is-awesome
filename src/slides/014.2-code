@@ -1,20 +1,19 @@
-type ItineraryItem = Flight | Layover
-type Itinerary = ItineraryItem[]
-
-interface Trips {
-    [tripName: string]: Itinerary
+interface Feature {
+    canUserToggle: boolean
+    enabled: boolean
 }
 
-const trips: Trips = {
-    'To NDC!': [
-        { from: 'PER', to: 'SYD', duration: [4, 5] },
-        { from: 'SYD', to: 'SFO', duration: [13, 20] },
-        { from: 'SFO', to: 'MSP', duration: [4, 0] }
-    ]
-    'Home!': [
-        { from: 'MSP', to: 'SFO', duration: [4, 24] },
-        { from: 'SFO', to: 'SYD', duration: [14, 40] },
-        // Compilation error: duraation is not a property on Flight | Layover
-        { from: 'SYD', to: 'PER', duraation: [5, 5] }
-    ]
+interface Features {
+    [featureName: string]: Feature
+}
+
+const features: Features = {
+    autoplayVideo: {
+        canUserToggle: false,
+        enabled: true
+    },
+    newArticlePage: {
+        canUserToggle: true,
+        enabled: false
+    }
 }

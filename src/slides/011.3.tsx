@@ -8,10 +8,10 @@ export default (
         lang="ts"
         code={code}
         ranges={[
-            { loc: [0, 0], title: 'Control flow analysis' },
-            { loc: [0, 1], note: 'An optional parameter' },
-            { loc: [1, 4], note: 'Return undefined if options is not defined' },
-            { loc: [5, 6], note: 'Options is no longer unioned with undefined' }
+            { loc: [0, 1], note: 'Function with optional options object' },
+            { loc: [1, 2], note: 'Set options to empty object if not defined' },
+            { loc: [2, 3], note: 'TypeScript has now removed `undefined` from type of options!' },
+            { loc: [4, 5], note: '`options` is now { pretty: boolean }' }
         ]}
     />
 )

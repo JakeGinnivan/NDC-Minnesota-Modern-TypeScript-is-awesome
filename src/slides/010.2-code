@@ -1,0 +1,9 @@
+type GetLogMessage = () => string
+
+function log(msg: string | GetLogMessage) {
+    if (typeof msg === 'function') {
+        return console.log(msg())
+    }
+
+    console.log(msg)
+}

@@ -3,6 +3,8 @@ import { Slide, Heading } from 'spectacle'
 
 export default (
     <Slide transition={['fade']} bgColor="primary">
-        <Heading>ES6 Modules</Heading>
+        <Heading size={2} textColor="tertiary" caps>
+            Feature: Control flow analysis
+        </Heading>
     </Slide>
 )

@@ -4,7 +4,7 @@ import { Slide, Heading, Text, Appear } from 'spectacle'
 export default (
     <Slide transition={['fade']} bgColor="tertiary">
         <Heading size={1} textColor="primary" caps>
-            Agenda
+            Recap
         </Heading>
         <Appear>
             <Text textColor="secondary" lineHeight={1.5}>

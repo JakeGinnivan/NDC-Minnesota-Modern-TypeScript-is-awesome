@@ -18,7 +18,8 @@ export const awesomeImages = {
     bath: require('./assets/awesome-gifs/awesome-bath.gif'),
     dogStick: require('./assets/awesome-gifs/dog-stick.gif'),
     legoAwesome: require('./assets/awesome-gifs/legoAwesome.gif'),
-    legoFace: require('./assets/awesome-gifs/legoFace.gif')
+    legoFace: require('./assets/awesome-gifs/legoFace.gif'),
+    thatIsAwesome: require('./assets/awesome-gifs/thatisawesome.gif')
 }
 preloader(images)
 preloader(awesomeImages)
