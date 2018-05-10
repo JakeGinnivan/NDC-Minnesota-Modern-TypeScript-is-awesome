@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Slide, Heading, Appear, Image } from 'spectacle'
+import { Slide, Heading, Image } from 'spectacle'
 import { images } from '../images'
 
 export default (
@@ -8,8 +8,6 @@ export default (
             What is TypeScript?
         </Heading>
 
-        <Appear>
-            <Image src={images.typescriptSuperset} />
-        </Appear>
+        <Image src={images.typescriptSuperset} />
     </Slide>
 )

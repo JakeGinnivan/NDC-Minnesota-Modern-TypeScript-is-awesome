@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Slide, Heading, Image, Appear } from 'spectacle'
+import { Slide, Heading, Image } from 'spectacle'
 import { awesomeImages } from '../images'
 
 export default (
@@ -9,8 +9,6 @@ export default (
         </Heading>
         <Heading size={5}>It just works</Heading>
 
-        <Appear>
-            <Image width="50%" src={awesomeImages.bath} />
-        </Appear>
+        <Image width="50%" src={awesomeImages.bath} />
     </Slide>
 )
