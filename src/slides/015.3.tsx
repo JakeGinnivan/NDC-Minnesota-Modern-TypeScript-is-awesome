@@ -10,7 +10,7 @@ export default (
         <Heading size={5}>No hacky workarounds to remove modifiers!</Heading>
 
         <Appear>
-            <Image width="50%" src={awesomeImages.thatIsAwesome} />
+            <Image width="50%" src={awesomeImages.willFarrelAwesome} />
         </Appear>
     </Slide>
 )

@@ -10,7 +10,7 @@ export default (
         <Heading size={5}>The possibilities!</Heading>
 
         <Appear>
-            <Image width="50%" src={awesomeImages.thatIsAwesome} />
+            <Image width="50%" src={awesomeImages.flippinAwesome} />
         </Appear>
     </Slide>
 )

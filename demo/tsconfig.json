@@ -8,7 +8,7 @@
         "jsx": "react",
         "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
-        "strict": true,
+        "strict": false,
         "noUnusedLocals": true,
         "baseUrl": "."
     },

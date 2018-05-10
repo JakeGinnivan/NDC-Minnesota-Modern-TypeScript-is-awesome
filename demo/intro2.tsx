@@ -6,12 +6,12 @@ import { Block } from './block'
 const article = {
     heading: 'Intro to TypeScript',
     contents: [
-        { type: 'standfirst', text: 'It can sometimes be hard to see the value in TypeScript.' },
-        { type: 'text', tixt: 'But after using it, it is very hard to go back.' },
-        { type: 'blockquote', quote: 'But after using it, it is very hard to go back.', cite: 'Jake Ginnivan' },
+        { type: 'standfirst', text: 'TypeScript just keeps getting better.' },
+        { type: 'text', tixt: 'Lets start with the basics.' },
+        { type: 'blockquote', quote: 'TypeScript is awesome.', cite: 'Jake Ginnivan' },
         {
             type: 'text',
-            text: 'Give it a go, you will not regret it',
+            text: 'TypeScript is awesome.',
             formatting: [{ type: 'italics', range: [18, 26] }]
         }
     ]

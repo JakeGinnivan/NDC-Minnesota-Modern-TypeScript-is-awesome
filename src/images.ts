@@ -11,7 +11,8 @@ export const images = {
 
     npm: require('./assets/modules/npm.png'),
     webpack: require('./assets/modules/webpack.jpg'),
-    browserify: require('./assets/modules/browserify_logo.png')
+    browserify: require('./assets/modules/browserify_logo.png'),
+    typescriptSuperset: require('./assets/typescript-superset.png')
 }
 
 export const awesomeImages = {
@@ -19,7 +20,9 @@ export const awesomeImages = {
     dogStick: require('./assets/awesome-gifs/dog-stick.gif'),
     legoAwesome: require('./assets/awesome-gifs/legoAwesome.gif'),
     legoFace: require('./assets/awesome-gifs/legoFace.gif'),
-    thatIsAwesome: require('./assets/awesome-gifs/thatisawesome.gif')
+    thatIsAwesome: require('./assets/awesome-gifs/thatisawesome.gif'),
+    willFarrelAwesome: require('./assets/awesome-gifs/will-farrel-awesome.gif'),
+    flippinAwesome: require('./assets/awesome-gifs/flippinAwesome.gif')
 }
 preloader(images)
 preloader(awesomeImages)

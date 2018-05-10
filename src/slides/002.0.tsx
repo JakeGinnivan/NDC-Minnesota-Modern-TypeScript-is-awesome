@@ -15,9 +15,5 @@ export default (
         <Appear>
             <Text>Converted to TypeScript after launch of The West</Text>
         </Appear>
-
-        <Appear>
-            <Text margin="30px 0 0 0">Why?</Text>
-        </Appear>
     </Slide>
 )
