@@ -1,23 +1,23 @@
 interface TextBlock {
-    type: 'text'
+    kind: 'text'
     text: string
     formatting: TextFormatting
 }
 interface StandfirstBlock {
-    type: 'standfirst'
+    kind: 'standfirst'
     text: string
 }
 interface BlockQuote {
-    type: 'blockquote'
+    kind: 'blockquote'
     quote: string
     cite: string
 }
 
 type Blocks = TextBlock | StandfirstBlock | BlockQuote
-type BlockTypes = Blocks['type']
+type BlockTypes = Blocks['kind']
 
 const renderBlock = ({ block }: { block: Blocks }) => {
-    switch (block.type) {
+    switch (block.kind) {
         case 'text':
             return <TextComponent text={block.text} formatting={block.formatting} />
 
@@ -38,7 +38,7 @@ const renderBlock = ({ block }: { block: Blocks }) => {
 }
 
 function assertNever(block: Blocks): never {
-    throw new Error(`${block.type} is not handled`)
+    throw new Error(`${block.kind} is not handled`)
 }
 
 interface TextFormatting {

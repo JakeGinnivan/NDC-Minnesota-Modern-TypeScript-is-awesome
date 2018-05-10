@@ -6,4 +6,4 @@ interface Feature {
 type Features = 'autoplayVideo' | 'newArticlePage'
 
 type FeatureState = { [feature in Features]: Feature }
-type FeatureDescription = { [feature in Features]: string }
+type FeatureDescription = { [feature in keyof FeatureState]: string }

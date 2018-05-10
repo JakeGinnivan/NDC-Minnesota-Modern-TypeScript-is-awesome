@@ -17,12 +17,14 @@ const article = {
     ]
 }
 
-const ArticleComponent = props => (
-    <div>
-        <h1>{props.article.heading}</h1>
-        <article>{props.article.content.map(block => <Block block={block} />)}</article>
-    </div>
-)
+const ArticleComponent = props => {
+    return (
+        <div>
+            <h1>{props.article.heading}</h1>
+            <article>{props.article.content.map(block => <Block block={block} />)}</article>
+        </div>
+    )
+}
 
 const articleElement = <ArticleComponent article={article} />
 articleElement
